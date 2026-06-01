@@ -31,9 +31,17 @@
 		solutions. Bridging the gap between creative frontend vision and essential backend logic.
 	</p>
 	<div class="flex flex-col gap-6 sm:flex-row">
-		<ElevatedButton title="Contact Me" path="/about">
+		<ElevatedButton
+			className="flex px-[80px] py-3 text-lg font-semibold"
+			title="Contact Me"
+			path="/about"
+		>
 			<span class="material-icons md-20">arrow_forward</span>
 		</ElevatedButton>
-		<OutlinedButton title="View Work" path="/projects" />
+		<OutlinedButton
+			className="flex px-[80px] py-3 text-lg font-semibold"
+			title="View Work"
+			path="/projects"
+		/>
 	</div>
 </section>
