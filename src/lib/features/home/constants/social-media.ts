@@ -1,6 +1,6 @@
-import type { props } from '../interfaces/footer-props';
+import type { props } from '$lib/features/home/interfaces/footer-props';
 
-export const socialMedia: props[] = [
+export const socialMedia: readonly props[] = [
 	{
 		alt: 'Github',
 		link: 'https://github.com/bima1313'

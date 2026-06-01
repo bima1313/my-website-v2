@@ -1,1 +1,1 @@
-export const categories: string[] = ['All', 'Frontend', 'Android', 'Full Stack'];
+export const categories: readonly string[] = ['All', 'Frontend', 'Android', 'Full Stack'];
