@@ -8,7 +8,7 @@
 	const rightSkillsData: props[] = skills.slice(half);
 </script>
 
-<main>
+<main class="selection:bg-secondary selection:text-surface-lowest">
 	<Header />
 	<section class="mx-auto px-4 pb-20 md:px-16">
 		<div class="grid grid-cols-1 gap-6 lg:grid-cols-12">

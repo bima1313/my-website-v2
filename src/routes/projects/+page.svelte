@@ -4,7 +4,9 @@
 	import { projects } from '$lib/features/projects/constants/projects';
 </script>
 
-<main class="mx-auto flex w-full flex-grow flex-col items-center gap-20 px-4 py-20 md:px-16">
+<main
+	class="mx-auto flex w-full flex-grow flex-col items-center gap-20 px-4 py-20 selection:bg-secondary selection:text-surface-lowest md:px-16"
+>
 	<Header />
 	<section class="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 		{#each projects as project, index (index)}

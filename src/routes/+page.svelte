@@ -3,7 +3,7 @@
 	import IntroductionSection from '$lib/features/home/components/IntroductionSection.svelte';
 </script>
 
-<main>
+<main class="selection:bg-secondary selection:text-surface-lowest">
 	<IntroductionSection />
 	<FeaturedProjectsSection />
 </main>

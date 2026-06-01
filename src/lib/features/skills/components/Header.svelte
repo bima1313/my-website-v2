@@ -8,10 +8,7 @@
 			className="inline-flex items-center gap-2 py-1 mb-6 border border-white/10 bg-white/5 select-text "
 		>
 			<div class="pulse-animation h-2 w-2 rounded-full bg-secondary"></div>
-			<span
-				class="text-sm tracking-widest text-secondary selection:bg-secondary selection:text-surface-lowest"
-				>Capabilities</span
-			>
+			<span class="text-sm tracking-widest text-secondary">Capabilities</span>
 		</Chip>
 		<h1 class="mb-6 text-mobile text-on-surface md:text-display">
 			Technical <span
