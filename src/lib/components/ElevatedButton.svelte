@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import type { props } from './interfaces/button-props';
+	import type { props } from '$lib/interfaces/button-props';
 
 	let { children, title, path, className }: props = $props();
 </script>
