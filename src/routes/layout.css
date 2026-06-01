@@ -1,20 +1,21 @@
 @import 'tailwindcss';
 
 @theme {
-	--color-primary: #a6c8ff;	
+	--color-primary: #a6c8ff;
 	--color-on-primary: #00315f;
 	--color-primary-fixed: #d4e3ff;
 	--color-secondary: #bdf4ff;
 	--color-secondary-container: #00e3fd;
 	--color-tertiary: #e9c400;
-	/*surface colors*/	
+	--color-mint-green: #a7f3d0;
+	/*surface colors*/
 	--color-surface: #111318;
 	--color-surface-lowest: #0c0e12;
-	--color-surface-low: #1a1c20;	
+	--color-surface-low: #1a1c20;
 	--color-surface-high: #282a2e;
 	/*Text colors*/
 	--color-on-surface: #e2e2e8;
-	--color-on-surface-variant: #c2c6d2;	
+	--color-on-surface-variant: #c2c6d2;
 
 	--breakpoint-ml: 64rem;
 	--breakpoint-lg: 81rem;
@@ -56,4 +57,20 @@
 	background-color: rgba(22, 27, 34, 0.6);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	@apply backdrop-blur-xl;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 100%;
+	}
+	50% {
+		opacity: 50%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+.pulse-animation {
+	animation: animate 1.8s infinite;
 }
