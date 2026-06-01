@@ -1,4 +1,4 @@
-import type { Item } from '$lib/home/interfaces/item';
+import type { Item } from '$lib/features/home/interfaces/item';
 
 export const items: readonly Item[] = [
 	{

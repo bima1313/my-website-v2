@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Chip from '$lib/components/Chip.svelte';
-	import type { props } from '$lib/home/interfaces/card-props';
+	import type { props } from '$lib/features/home/interfaces/card-props';
 	import ImageContainer from './ImageContainer.svelte';
 
 	let { techTitle, tecthTitleColor, title, description, techUsed, image }: props = $props();

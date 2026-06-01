@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { items } from '$lib/home/constants/items';
+	import { items } from '$lib/features/home/constants/items';
 	import Chip from '$lib/components/Chip.svelte';
 	import ElevatedButton from '$lib/components/ElevatedButton.svelte';
 	import OutlinedButton from '$lib/components/OutlinedButton.svelte';

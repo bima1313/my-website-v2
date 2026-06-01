@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { props } from '$lib/projects/interfaces/card-props';
-	import ImageContainer from '$lib/projects/components/ImageContainer.svelte';
+	import type { props } from '$lib/features/projects/interfaces/card-props';
+	import ImageContainer from '$lib/features/projects/components/ImageContainer.svelte';
 	import Chip from '$lib/components/Chip.svelte';
 	import ElevatedButton from '$lib/components/ElevatedButton.svelte';
 	import OutlinedButton from '$lib/components/OutlinedButton.svelte';

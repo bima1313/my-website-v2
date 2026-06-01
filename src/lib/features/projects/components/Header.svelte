@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Chip from '$lib/components/Chip.svelte';
-	import { categories } from '$lib/projects/constants/chip-categories';
-	import { activation } from '$lib/projects/states/chip-activate.svelte';
+	import { categories } from '$lib/features/projects/constants/chip-categories';
+	import { activation } from '$lib/features/projects/states/chip-activate.svelte';
 </script>
 
 <header class="flex w-full flex-col items-start gap-6">

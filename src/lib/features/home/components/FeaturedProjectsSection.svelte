@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { projects } from '$lib/home/constants/projects';
+	import { projects } from '$lib/features/home/constants/projects';
 	import Card from './Card.svelte';
 </script>
 

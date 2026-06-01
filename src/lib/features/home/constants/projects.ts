@@ -1,4 +1,4 @@
-import type { props } from '$lib/home/interfaces/card-props';
+import type { props } from '$lib/features/home/interfaces/card-props';
 import img from '$lib/assets/sakagami-tomoyo.jpg';
 
 export const projects: readonly props[] = [

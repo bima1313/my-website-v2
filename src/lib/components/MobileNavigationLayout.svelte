@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
 	import { slide } from 'svelte/transition';
-	import { navItems } from '$lib/home/constants/nav-items';
+	import { navItems } from '$lib/features/home/constants/nav-items';
 	import { activation } from '$lib/states/mobile-nav-activation.svelte';
 	import Chip from './Chip.svelte';
 </script>

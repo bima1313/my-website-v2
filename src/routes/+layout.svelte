@@ -2,7 +2,7 @@
 	import './layout.css';
 	import type { Snippet } from 'svelte';
 	import { activation } from '$lib/states/mobile-nav-activation.svelte';
-	import { socialMedia } from '$lib/home/constants/social-media';
+	import { socialMedia } from '$lib/features/home/constants/social-media';
 	import favicon from '$lib/assets/favicon.svg';
 	import MobileNavigationBar from '$lib/components/MobileNavigationBar.svelte';
 	import MobileNavigationLayout from '$lib/components/MobileNavigationLayout.svelte';

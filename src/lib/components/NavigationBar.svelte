@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import { navItems } from '$lib/home/constants/nav-items';
+	import { navItems } from '$lib/features/home/constants/nav-items';
 </script>
 
 <nav class="hidden items-center gap-12 ml:flex" aria-label="main menu">

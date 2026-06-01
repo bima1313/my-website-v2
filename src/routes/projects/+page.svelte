@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Card from '$lib/projects/components/Card.svelte';
-	import Header from '$lib/projects/components/Header.svelte';
-	import { projects } from '$lib/projects/constants/projects';
+	import Card from '$lib/features/projects/components/Card.svelte';
+	import Header from '$lib/features/projects/components/Header.svelte';
+	import { projects } from '$lib/features/projects/constants/projects';
 </script>
 
 <main class="mx-auto flex w-full flex-grow flex-col items-center gap-20 px-4 py-20 md:px-16">
