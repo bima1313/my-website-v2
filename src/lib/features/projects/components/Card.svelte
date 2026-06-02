@@ -25,7 +25,7 @@
 		</div>
 		<div class="mt-auto flex gap-3 border-t border-white/5 pt-6">
 			<ElevatedButton
-				className="flex flex-1 font-semibold py-3 tracking-wider"
+				className="flex flex-1 font-semibold py-3 tracking-wider rounded-[0.25rem]"
 				title="View Demo"
 				path="/"
 			/>

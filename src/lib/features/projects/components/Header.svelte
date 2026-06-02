@@ -5,8 +5,8 @@
 </script>
 
 <header class="flex w-full flex-col items-start gap-6">
-	<h1 class="text-mobile text-on-surface md:text-display">Featured Projects</h1>
-	<p class="max-w-2xl text-on-surface-variant md:text-[18px]">
+	<h1 class="reveal text-mobile text-on-surface md:text-display">Featured Projects</h1>
+	<p class="reveal max-w-2xl text-on-surface-variant md:text-[18px]">
 		A selection of my recent work across web and mobile platforms, showcasing technical precision
 		and clean architecture.
 	</p>

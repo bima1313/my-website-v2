@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="flex w-full flex-col items-center gap-6 text-center selection:bg-secondary selection:text-surface-lowest md:w-1/2 md:items-start md:text-left"
+	class="reveal flex w-full flex-col items-center gap-6 text-center selection:bg-secondary selection:text-surface-lowest md:w-1/2 md:items-start md:text-left"
 >
 	<div>
 		<h2 class="text-base font-medium tracking-wider text-secondary-container uppercase">
