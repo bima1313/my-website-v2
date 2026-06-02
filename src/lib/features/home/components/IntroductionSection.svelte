@@ -34,7 +34,7 @@
 		<ElevatedButton
 			className="flex px-[80px] py-3 text-lg font-semibold group rounded-[0.25rem]"
 			title="Contact Me"
-			path="/"
+			path="/about#contact"
 		>
 			<span class="material-icons md-20 duration-200 ease-in-out group-hover:translate-x-2"
 				>arrow_forward</span

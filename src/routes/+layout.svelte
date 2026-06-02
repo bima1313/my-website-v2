@@ -24,7 +24,7 @@
 		<ElevatedButton
 			className="hidden cursor-pointer rounded-lg px-6 py-3 ml:inline-flex"
 			title="Contact Me"
-			path="/"
+			path="/about#contact"
 		/>
 	</div>
 </header>

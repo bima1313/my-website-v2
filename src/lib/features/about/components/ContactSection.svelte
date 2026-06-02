@@ -3,7 +3,7 @@
 	import TextInput from '$lib/features/about/components/TextInput.svelte';
 </script>
 
-<section class="mx-auto w-full max-w-[1280px] px-4 py-20 md:px-16">
+<section id="contact" class="mx-auto w-full max-w-[1280px] px-4 py-20 md:px-16">
 	<div class="mx-auto flex max-w-2xl flex-col gap-12">
 		<div class="flex flex-col gap-6 text-center">
 			<h3 class="text-sm font-medium tracking-wider text-secondary-container uppercase">
