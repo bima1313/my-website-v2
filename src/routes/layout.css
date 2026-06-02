@@ -70,7 +70,23 @@
 		opacity: 100%;
 	}
 }
-
+@keyframes reveal {
+	from {
+		opacity: 0%;
+		filter: blur(1.5px);
+	}
+	to {
+		opacity: 100%;
+		filter: blur(0px);
+	}
+}
 .pulse-animation {
 	animation: animate 1.8s infinite;
+}
+
+.reveal {
+	animation: reveal 0.2s ease-out both;
+	trigger-scope: --animation;
+	timeline-trigger: --animation view() entry 0% exit 100%;
+	animation-trigger: --animation play-forwards play-backwards;
 }

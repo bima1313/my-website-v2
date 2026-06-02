@@ -7,6 +7,7 @@
 	import MobileNavigationBar from '$lib/components/MobileNavigationBar.svelte';
 	import MobileNavigationLayout from '$lib/components/MobileNavigationLayout.svelte';
 	import NavigationBar from '$lib/components/NavigationBar.svelte';
+	import ElevatedButton from '$lib/components/ElevatedButton.svelte';
 
 	let { children }: { children: Snippet } = $props();
 </script>
@@ -20,11 +21,11 @@
 		<MobileNavigationBar />
 		<div class="text-2xl font-bold tracking-tight text-primary">Bima Hamdhika Irfy</div>
 		<NavigationBar />
-		<button
-			aria-label="contact-me-button"
-			class="hidden cursor-pointer rounded-lg bg-primary px-6 py-3 text-on-primary shadow-[0_0_15px_rgba(166,200,255,0.1)] shadow-primary/30 transition-colors duration-200 ease-in-out hover:bg-primary-fixed hover:shadow-[0_0_20px] ml:inline-flex"
-			>Contact Me</button
-		>
+		<ElevatedButton
+			className="hidden cursor-pointer rounded-lg px-6 py-3 ml:inline-flex"
+			title="Contact Me"
+			path="/"
+		/>
 	</div>
 </header>
 {#if activation.isActive}

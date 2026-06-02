@@ -23,20 +23,22 @@
 			</li>
 		{/each}
 	</ul>
-	<h1 class="mb-6 text-mobile tracking-tight text-balance text-on-surface md:text-display">
+	<h1 class="reveal mb-6 text-mobile tracking-tight text-balance text-on-surface md:text-display">
 		Building High-Performance Digital Experiences.
 	</h1>
-	<p class="mb-20 max-w-[650px] text-lg text-balance text-on-surface-variant">
+	<p class="reveal mb-20 max-w-[650px] text-lg text-balance text-on-surface-variant">
 		Specializing in fluid, 60fps Android applications with Flutter while building functional web
 		solutions. Bridging the gap between creative frontend vision and essential backend logic.
 	</p>
 	<div class="flex flex-col gap-6 sm:flex-row">
 		<ElevatedButton
-			className="flex px-[80px] py-3 text-lg font-semibold"
+			className="flex px-[80px] py-3 text-lg font-semibold group rounded-[0.25rem]"
 			title="Contact Me"
-			path="/about"
+			path="/"
 		>
-			<span class="material-icons md-20">arrow_forward</span>
+			<span class="material-icons md-20 duration-200 ease-in-out group-hover:translate-x-2"
+				>arrow_forward</span
+			>
 		</ElevatedButton>
 		<OutlinedButton
 			className="flex px-[80px] py-3 text-lg font-semibold"
