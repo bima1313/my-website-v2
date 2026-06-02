@@ -25,9 +25,9 @@
 			/>
 			<button
 				type="submit"
-				class="mt-3 flex items-center gap-3 self-center rounded-[0.25rem] bg-hyper-blue px-12 py-3 text-[17px] font-medium text-night-snow transition-colors duration-200 ease-in-out hover:bg-primary-fixed hover:text-on-primary md:self-start"
+				class="mt-3 flex items-center gap-3 self-center rounded-[0.25rem] bg-hyper-blue px-12 py-3 text-sm md:text-[17px] font-medium text-night-snow transition-colors duration-200 ease-in-out hover:bg-primary-fixed hover:text-on-primary md:self-start"
 				>Send Message
-				<span class="material-icons">send</span></button
+				<span class="material-icons md-20">send</span></button
 			>
 		</form>
 	</div>
