@@ -1,4 +1,4 @@
-import { PRIVATE_RESEND_API_KEY } from '$env/static/private';
+import { PRIVATE_EMAIL, PRIVATE_RESEND_API_KEY } from '$env/static/private';
 import { fail } from '@sveltejs/kit';
 import { Resend } from 'resend';
 
@@ -21,21 +21,27 @@ export const actions = {
 		try {
 			const { data, error } = await resend.emails.send({
 				from: `Portfolio Contact <onboarding@resend.dev>`,
-				to: 'testing@gmail.com',
+				to: PRIVATE_EMAIL,
 				subject: `Portfolio Contact: 💼 New message from ${name}`,
 				text: `\n\n${message}`
 			});
 
 			if (error) {
-				return fail(500, { error: true, message: error.message });
+				return fail(500, {
+					success: false,
+					error: true,
+					message: "Can't send message. Please try again later"
+				});
 			}
 
 			return {
 				success: true,
+				error: false,
 				message: 'Your message has been sent successfully'
 			};
 		} catch (error) {
 			return fail(500, {
+				success: false,
 				error: true,
 				message: 'An error occurred on the server. Please try again later.'
 			});

@@ -52,11 +52,11 @@
 					<span class="material-icons md-20">send</span></button
 				>
 			</form>
-			{#if form?.message && isLoading == false}
+			{#if form?.success && isLoading == false}
 				<span class="text-lg text-on-surface-variant">Your message is success</span>
 			{/if}
-			{#if form?.error}
-				<span>{form.message}</span>
+			{#if form?.error && isLoading == false}
+				<span class="text-lg text-on-surface-variant">{form.message}</span>
 			{/if}
 		</div>
 	</div>
