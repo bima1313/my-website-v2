@@ -4,8 +4,9 @@
 	let {
 		title,
 		placeholder,
+		isLoading,
 		type = 'text'
-	}: { title: string; placeholder: string; type?: string } = $props();
+	}: { title: string; placeholder: string; isLoading: boolean; type?: string } = $props();
 </script>
 
 <div class="flex flex-col gap-1">
@@ -16,5 +17,7 @@
 		name={title}
 		id={title}
 		{placeholder}
+		disabled={isLoading}
+		required
 	/>
 </div>

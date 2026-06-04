@@ -4,8 +4,9 @@
 	let {
 		title,
 		placeholder,
+		isLoading,
 		rows = 4
-	}: { title: string; placeholder: string; rows?: number } = $props();
+	}: { title: string; placeholder: string; isLoading: boolean; rows?: number } = $props();
 </script>
 
 <div class="flex flex-col gap-1">
@@ -16,5 +17,7 @@
 		id={title}
 		{placeholder}
 		{rows}
+		disabled={isLoading}
+		required
 	></textarea>
 </div>

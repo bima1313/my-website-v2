@@ -1,6 +1,11 @@
 <script lang="ts">
+	import { applyAction, enhance } from '$app/forms';
+	import type { ActionData } from '$lib';
 	import TextArea from '$lib/features/about/components/TextArea.svelte';
 	import TextInput from '$lib/features/about/components/TextInput.svelte';
+
+	let { form }: { form: ActionData } = $props();
+	let isLoading = $state(false);
 </script>
 
 <section id="contact" class="mx-auto w-full max-w-[1280px] px-4 py-20 md:px-16">
@@ -14,21 +19,45 @@
 				Have a project in mind or just want to say hi? Drop me a message below.
 			</p>
 		</div>
-		<form
-			class="glass-panel has-foucs:transition-all flex flex-col gap-6 rounded-xl p-12 has-focus:shadow-[0_0_20px_5px] has-focus:shadow-secondary-container/10 has-focus:duration-300"
+		<div
+			class="glass-panel flex flex-col gap-6 rounded-xl p-12 has-focus:shadow-[0_0_20px_5px] has-focus:shadow-secondary-container/10 has-focus:transition-all has-focus:duration-300"
 		>
-			<TextInput title="name" placeholder="Your name" />
-			<TextInput title="email" placeholder="your@email.com" type="email" />
-			<TextArea
-				title="message"
-				placeholder="Share some details about your project, or just say hello!..."
-			/>
-			<button
-				type="submit"
-				class="mt-3 flex items-center gap-3 self-center rounded-[0.25rem] bg-hyper-blue px-12 py-3 text-sm md:text-[17px] font-medium text-night-snow transition-colors duration-200 ease-in-out hover:bg-primary-fixed hover:text-on-primary md:self-start"
-				>Send Message
-				<span class="material-icons md-20">send</span></button
+			<form
+				class="flex flex-col gap-6"
+				method="POST"
+				action="?/create"
+				use:enhance={() => {
+					isLoading = true;
+					return async ({ result, formElement }) => {
+						isLoading = false;
+						await applyAction(result);
+						if (form?.success) {
+							formElement.reset();
+						}
+					};
+				}}
 			>
-		</form>
+				<TextInput title="name" placeholder="Your name" {isLoading} />
+				<TextInput title="email" placeholder="your@email.com" type="email" {isLoading} />
+				<TextArea
+					title="message"
+					placeholder="Share some details about your project, or just say hello!..."
+					{isLoading}
+				/>
+				<button
+					disabled={isLoading}
+					type="submit"
+					class="mt-3 flex items-center gap-3 self-center rounded-[0.25rem] bg-hyper-blue px-12 py-3 text-sm font-medium text-night-snow transition-colors duration-200 ease-in-out hover:bg-primary-fixed hover:text-on-primary md:self-start md:text-[17px]"
+					>{isLoading ? 'Sending...' : 'Send Message'}
+					<span class="material-icons md-20">send</span></button
+				>
+			</form>
+			{#if form?.message && isLoading == false}
+				<span class="text-lg text-on-surface-variant">Your message is success</span>
+			{/if}
+			{#if form?.error}
+				<span>{form.message}</span>
+			{/if}
+		</div>
 	</div>
 </section>
