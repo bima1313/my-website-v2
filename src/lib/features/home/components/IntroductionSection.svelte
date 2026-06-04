@@ -23,10 +23,10 @@
 			</li>
 		{/each}
 	</ul>
-	<h1 class="reveal mb-6 text-mobile tracking-tight text-balance text-on-surface md:text-display">
+	<h1 class="mb-6 text-mobile tracking-tight text-balance text-on-surface md:text-display">
 		Building High-Performance Digital Experiences.
 	</h1>
-	<p class="reveal mb-20 max-w-[650px] text-lg text-balance text-on-surface-variant">
+	<p class="mb-20 max-w-[650px] text-lg text-balance text-on-surface-variant">
 		Specializing in fluid, 60fps Android applications with Flutter while building functional web
 		solutions. Bridging the gap between creative frontend vision and essential backend logic.
 	</p>

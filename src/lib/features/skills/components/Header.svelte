@@ -10,13 +10,13 @@
 			<div class="pulse-animation h-2 w-2 rounded-full bg-secondary"></div>
 			<span class="text-sm tracking-widest text-secondary">Capabilities</span>
 		</Chip>
-		<h1 class="reveal mb-6 text-mobile text-on-surface md:text-display">
+		<h1 class="mb-6 text-mobile text-on-surface md:text-display">
 			Technical <span
 				class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
 				>Toolkit</span
 			>.
 		</h1>
-		<p class="reveal text-lg leading-relaxed text-on-surface-variant">
+		<p class="text-lg leading-relaxed text-on-surface-variant">
 			A comprehensive breakdown of my development stack, blending pixel-perfect frontend execution
 			with clean, functional backend integrations. Cultivated through dedicated development and
 			continuous learning.

@@ -8,8 +8,8 @@
 <section class="relative z-10 mx-auto flex w-full flex-col px-4 py-[120px] md:px-16">
 	<div class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
 		<div>
-			<h2 class="reveal mb-1 text-[40px] font-bold text-on-surface">Featured Projects</h2>
-			<p class="reveal text-[16px] font-[400] text-on-surface-variant">
+			<h2 class="mb-1 text-[40px] font-bold text-on-surface">Featured Projects</h2>
+			<p class="text-[16px] font-[400] text-on-surface-variant">
 				Selected works demonstrating technical depth and polished UX.
 			</p>
 		</div>
