@@ -5,6 +5,14 @@
 	import { navItems } from '$lib/features/home/constants/nav-items';
 	import { activation } from '$lib/states/mobile-nav-activation.svelte';
 	import Chip from './Chip.svelte';
+	import type { Pathname } from '$app/types';
+
+	let lastProjectsUrl = $state('/projects');
+	$effect(() => {
+		if (page.url.pathname === '/projects') {
+			lastProjectsUrl = page.url.pathname + page.url.search;
+		}
+	});
 </script>
 
 <div transition:slide={{ axis: 'x' }} class="fixed z-20 flex min-h-screen w-full backdrop-blur-xs">
@@ -14,7 +22,9 @@
 				<a
 					aria-current={page.url.pathname === item.navPath}
 					onclick={() => (activation.isActive = !activation.isActive)}
-					href={resolve(item.navPath)}
+					href={item.navPath === '/projects'
+						? resolve(lastProjectsUrl as Pathname)
+						: resolve(item.navPath)}
 				>
 					<Chip
 						className={[

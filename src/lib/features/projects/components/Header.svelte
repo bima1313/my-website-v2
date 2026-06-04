@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import Chip from '$lib/components/Chip.svelte';
 	import { categories } from '$lib/features/projects/constants/chip-categories';
-	import { activation } from '$lib/features/projects/states/chip-activate.svelte';
+
+	let currentCategory = $derived(page.url.searchParams.get('category') || categories[0]);
 </script>
 
 <header class="flex w-full flex-col items-start gap-6">
@@ -11,20 +14,24 @@
 		and clean architecture.
 	</p>
 	<ul class="mt-6 flex flex-wrap gap-3">
-		{#each categories as category, index (index)}
+		{#each Object.entries(categories) as [index, category] (index)}
 			<li>
-				<button onclick={() => (activation.index = index)}>
+				<a
+					href={category === categories[0]
+						? resolve('/projects')
+						: resolve(`/projects?category=${category}`)}
+				>
 					<Chip
 						className={[
 							'rounded-full border px-6 py-3 font-medium  transition-colors hover:border-white/10 cursor-pointer',
-							activation.index == index
+							currentCategory === category
 								? 'border-secondary bg-secondary-container/20 text-secondary'
 								: 'bg-white/5 border-transparent'
 						]}
 					>
 						{category}
 					</Chip>
-				</button>
+				</a>
 			</li>
 		{/each}
 	</ul>
