@@ -20,10 +20,12 @@ export const actions = {
 
 		try {
 			const { data, error } = await resend.emails.send({
-				from: `${name} <${email}>`,
+				from: `Portfolio Contact <onboarding@resend.dev>`,
 				to: PRIVATE_EMAIL,
-				subject: `Portfolio Contact: 💼 New message from ${name}`,
-				text: `\n\n${message}`
+				subject: `💼 New message from ${name}`,
+				text: `\n\nYou received new message from your website portofolio.\n\nName: ${name}
+				\nEmail: ${email}
+				\nMessage:\n\n${message}`
 			});
 
 			if (error) {
