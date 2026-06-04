@@ -2,8 +2,8 @@
 	import './layout.css';
 	import type { Snippet } from 'svelte';
 	import { activation } from '$lib/states/mobile-nav-activation.svelte';
-	import { socialMedia } from '$lib/features/home/constants/social-media';
-	import favicon from '$lib/assets/favicon.svg';
+	import { socialMedia } from '$lib/features/home/constants/social-media';	
+	import icon from '$lib/assets/icon.ico';
 	import MobileNavigationBar from '$lib/components/MobileNavigationBar.svelte';
 	import MobileNavigationLayout from '$lib/components/MobileNavigationLayout.svelte';
 	import NavigationBar from '$lib/components/NavigationBar.svelte';
@@ -12,7 +12,7 @@
 	let { children }: { children: Snippet } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head><link rel="icon" href={icon} /></svelte:head>
 <header
 	class="sticky top-0 z-50 flex h-20 w-full items-center bg-surface/60 font-bold
 	 outline-1 outline-white/10 backdrop-blur-xl transition-all duration-300"
