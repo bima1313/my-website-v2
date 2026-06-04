@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { projects } from '$lib/features/home/constants/projects';
+	import type { Project } from '$lib/features/home/interfaces/card-props';
 	import Card from './Card.svelte';
+	let { data }: { data: Project[] } = $props();
 </script>
 
 <section class="relative z-10 mx-auto flex w-full flex-col px-4 py-[120px] md:px-16">
@@ -21,14 +22,13 @@
 	</div>
 
 	<div class="grid auto-rows-[400px] grid-cols-1 gap-10">
-		{#each projects as project, index (index)}
+		{#each data as project, index (index)}
 			<Card
-				techTitle={project.techTitle}
-				tecthTitleColor={project.tecthTitleColor}
+				mainTech={project.mainTech}
 				title={project.title}
 				description={project.description}
 				techUsed={project.techUsed}
-				image={project.image}
+				images={project.images}
 			/>
 		{/each}
 	</div>

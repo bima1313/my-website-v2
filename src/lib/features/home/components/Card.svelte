@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Chip from '$lib/components/Chip.svelte';
-	import type { props } from '$lib/features/home/interfaces/card-props';
+	import type { Project } from '$lib/features/home/interfaces/card-props';
+	import { toTextColor } from '$lib/utils/to-text-color';
 	import ImageContainer from './ImageContainer.svelte';
 
-	let { techTitle, tecthTitleColor, title, description, techUsed, image }: props = $props();
+	let { mainTech, title, description, techUsed, images }: Project = $props();
 </script>
 
 <article
@@ -14,7 +15,9 @@
 		class="relative order-2 flex w-full flex-col justify-center px-12 py-6 ml:order-1 ml:w-[45%]
 	lg:p-12"
 	>
-		<span class={['mb-3 font-medium tracking-widest', tecthTitleColor]}>{techTitle}</span>
+		<span class={['mb-3 font-medium tracking-widest', toTextColor(mainTech.color)]}
+			>{mainTech.name.toUpperCase()}</span
+		>
 		<h3 class="mb-3 truncate text-headline-md text-on-surface sm:text-notruncate">{title}</h3>
 		<p
 			class="mb-6 truncate text-on-surface-variant ml:line-clamp-6 ml:text-wrap lg:text-notruncate"
@@ -22,12 +25,12 @@
 			{description}
 		</p>
 		<div class="mt-auto flex flex-wrap gap-2 text-xs">
-			{#each techUsed as tech, index (index)}
+			{#each techUsed.slice(1) as tech, index (index)}
 				<Chip>
 					<span>{tech}</span>
 				</Chip>
 			{/each}
 		</div>
 	</div>
-	<ImageContainer imageAssets={image.imageAssets} imageAlt={image.imageAlt} />
+	<ImageContainer imageAssets={images.assets} imageAlt={images.alt} />
 </article>
