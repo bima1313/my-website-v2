@@ -20,7 +20,7 @@ export const actions = {
 
 		try {
 			const { data, error } = await resend.emails.send({
-				from: `Portfolio Contact <onboarding@resend.dev>`,
+				from: `${name} <${email}>`,
 				to: PRIVATE_EMAIL,
 				subject: `Portfolio Contact: 💼 New message from ${name}`,
 				text: `\n\n${message}`
