@@ -6,7 +6,7 @@ export const load: PageServerLoad = async () => {
 	const { data, error } = await supabase
 		.from('projects')
 		.select('title, main_tech, description, tech_used, images')
-		.order('id', { ascending: true })
+		.order('created_at')
 		.limit(3);
 
 	if (error) {
@@ -14,12 +14,10 @@ export const load: PageServerLoad = async () => {
 		return { errors: 'Error fetch projects, please try again', projects: [] };
 	}
 
-	const mappedData: Project[] = data.map((item) => ({
-		title: item.title,
-		mainTech: item.main_tech,
-		description: item.description,
-		techUsed: item.tech_used,
-		images: item.images
+	const mappedData: Project[] = data.map(({ main_tech, tech_used, ...item }) => ({
+		...item,
+		mainTech: main_tech,
+		techUsed: tech_used
 	}));
 	return {
 		projects: mappedData,
