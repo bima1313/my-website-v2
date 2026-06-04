@@ -1,11 +1,14 @@
-interface Image {
-	imageAssets: string;
-	imageAlt: string;
+import type { Images } from '$lib/interfaces/shared';
+
+interface ProjectLink {
+	demo: string;
+	sourceCode: string;
 }
-export interface props {
-	tag: string;	
+export interface Project {
+	tag: string;
 	title: string;
 	description: string;
 	techUsed: string[];
-	image: Image;
+	images: Images;
+	projectLink: ProjectLink;
 }

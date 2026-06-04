@@ -1,7 +1,9 @@
 <script lang="ts">
 	import Card from '$lib/features/projects/components/Card.svelte';
 	import Header from '$lib/features/projects/components/Header.svelte';
-	import { projects } from '$lib/features/projects/constants/projects';
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
 </script>
 
 <main
@@ -9,14 +11,17 @@
 >
 	<Header />
 	<section class="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-		{#each projects as project, index (index)}
-			<Card
-				tag={project.tag}
-				title={project.title}
-				description={project.description}
-				techUsed={project.techUsed}
-				image={project.image}
-			/>
-		{/each}
+		{#if data.errors == null}
+			{#each data.projects as project, index (index)}			
+				<Card
+					tag={project.tag}
+					title={project.title}
+					description={project.description}
+					techUsed={project.techUsed}
+					images={project.images}
+					projectLink={project.projectLink}
+				/>
+			{/each}
+		{/if}
 	</section>
 </main>
