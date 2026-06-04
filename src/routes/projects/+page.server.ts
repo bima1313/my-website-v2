@@ -1,4 +1,4 @@
-import { capitalize } from '$lib/features/about/utils/capitalize';
+import { capitalize } from '$lib/utils/capitalize';
 import { categories } from '$lib/features/projects/constants/chip-categories';
 import type { Project } from '$lib/features/projects/interfaces/card-props';
 import { supabase } from '$lib/supabase/supabase-client';

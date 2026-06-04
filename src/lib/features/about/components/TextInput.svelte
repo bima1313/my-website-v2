@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { capitalize } from '$lib/features/about/utils/capitalize';
+	import { capitalize } from '$lib/utils/capitalize';
 
 	let {
 		title,
