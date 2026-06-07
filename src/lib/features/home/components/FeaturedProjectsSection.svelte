@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import type { Project } from '$lib/features/home/interfaces/card-props';
-	import Card from './Card.svelte';
-	let { data }: { data: Project[] } = $props();
+	import { page } from '$app/state';
+	import type { PageData } from '$lib';
+	import Card from './Card.svelte';	
+
+	const data = page.data as PageData;
 </script>
 
 <section class="relative z-10 mx-auto flex w-full flex-col px-4 py-[120px] md:px-16">
@@ -22,14 +24,16 @@
 	</div>
 
 	<div class="grid auto-rows-[400px] grid-cols-1 gap-10">
-		{#each data as project, index (index)}
-			<Card
-				mainTech={project.mainTech}
-				title={project.title}
-				description={project.description}
-				techUsed={project.techUsed}
-				images={project.images}
-			/>
-		{/each}
+		{#await data.projects then data}
+			{#each data.projects as project, index (index)}
+				<Card
+					mainTech={project.mainTech}
+					title={project.title}
+					description={project.description}
+					techUsed={project.techUsed}
+					images={project.images}
+				/>
+			{/each}
+		{/await}
 	</div>
 </section>
