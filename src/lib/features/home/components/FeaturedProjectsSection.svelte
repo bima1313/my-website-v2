@@ -2,7 +2,8 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import type { PageData } from '$lib';
-	import Card from './Card.svelte';	
+	import Card from './Card.svelte';
+	import ShimmerCard from './ShimmerCard.svelte';
 
 	const data = page.data as PageData;
 </script>
@@ -24,7 +25,13 @@
 	</div>
 
 	<div class="grid auto-rows-[400px] grid-cols-1 gap-10">
-		{#await data.projects then data}
+		{#await data.projects}
+			<div class="grid auto-rows-[400px] grid-cols-1 gap-10">
+				{#each Array(3)}
+					<ShimmerCard />
+				{/each}
+			</div>
+		{:then data}
 			{#each data.projects as project, index (index)}
 				<Card
 					mainTech={project.mainTech}
