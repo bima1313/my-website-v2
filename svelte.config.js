@@ -1,7 +1,5 @@
 import adapter from '@sveltejs/adapter-vercel';
-import { loadEnv } from 'vite';
 
-const env = loadEnv(process.env.NODE_ENV || 'development', process.cwd(), '');
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	compilerOptions: {
@@ -17,7 +15,7 @@ const config = {
 				sizes: [640, 828, 1200, 1920, 3840],
 				minimumCacheTTL: 2592000,
 				formats: ['image/avif', 'image/webp'],
-				domains: [env.VITE_SUPABASE_DOMAIN]
+				domains: ["ucrjmqloirqtrqxindxn.supabase.co"]
 			}
 		})
 	}
