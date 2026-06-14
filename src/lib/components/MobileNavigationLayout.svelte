@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
-	import { slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import { navItems } from '$lib/features/home/constants/nav-items';
 	import { activation } from '$lib/states/mobile-nav-activation.svelte';
 	import Chip from './Chip.svelte';
@@ -16,7 +16,7 @@
 	});
 </script>
 
-<div transition:slide={{ axis: 'x' }} class="fixed z-20 flex min-h-screen w-full backdrop-blur-xs">
+<div transition:fly={{ x:-200 }} class="fixed z-20 flex min-h-screen w-full backdrop-blur-xs">
 	<div class=" flex w-[62.5%] bg-surface-high">
 		<ul class="w-full px-8 py-12">
 			{#each navItems as item, index (index)}
