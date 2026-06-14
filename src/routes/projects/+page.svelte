@@ -23,7 +23,7 @@
 					title={project.title}
 					description={project.description}
 					techUsed={project.techUsed}
-					images={project.images}
+					image={project.image}
 					projectLink={project.projectLink}
 				/>
 			{/each}

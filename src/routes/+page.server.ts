@@ -6,7 +6,7 @@ export const load: PageServerLoad = async () => {
 	const data = async () => {
 		const { data, error } = await supabase
 			.from('projects')
-			.select('title, main_tech, description, tech_used, images')
+			.select('title, main_tech, description, tech_used, image')
 			.order('created_at')
 			.limit(3);
 

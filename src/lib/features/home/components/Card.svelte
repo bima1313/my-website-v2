@@ -4,7 +4,7 @@
 	import { toTextColor } from '$lib/utils/to-text-color';
 	import ImageContainer from './ImageContainer.svelte';
 
-	let { mainTech, title, description, techUsed, images }: Project = $props();
+	let { mainTech, title, description, techUsed, image }: Project = $props();
 </script>
 
 <article
@@ -32,5 +32,5 @@
 			{/each}
 		</div>
 	</div>
-	<ImageContainer imageAssets={images.assets} imageAlt={images.alt} />
+	<ImageContainer {image} />
 </article>

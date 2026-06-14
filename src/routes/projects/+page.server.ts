@@ -10,7 +10,7 @@ export const load: PageServerLoad = async ({ url }) => {
 	const data = async () => {
 		let query = supabase
 			.from('projects')
-			.select('tag, title, description, tech_used, images, project_link')
+			.select('tag, title, description, tech_used, image, project_link')
 			.order('created_at');
 
 		if (

@@ -2,12 +2,7 @@ export interface MainTech {
 	name: string;
 	color: string;
 }
-export interface ImageAssets {
-	avifLink?: string;
-	webpLink?: string;
-	defaultLink: string;
-}
-export interface Images {
+export interface Image {
 	alt: string;
-	assets: ImageAssets;
+	asset: string;
 }

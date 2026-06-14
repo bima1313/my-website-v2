@@ -1,4 +1,4 @@
-import type { Images } from '$lib/interfaces/shared';
+import type { Image } from '$lib/interfaces/shared';
 
 interface ProjectLink {
 	demo: string;
@@ -9,6 +9,6 @@ export interface Project {
 	title: string;
 	description: string;
 	techUsed: string[];
-	images: Images;
+	image: Image;
 	projectLink: ProjectLink;
 }

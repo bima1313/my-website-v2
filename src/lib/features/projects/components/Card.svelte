@@ -5,14 +5,14 @@
 	import ElevatedButton from '$lib/components/ElevatedButton.svelte';
 	import OutlinedButton from '$lib/components/OutlinedButton.svelte';
 
-	let { tag, title, description, techUsed, images, projectLink }: Project = $props();
+	let { tag, title, description, techUsed, image, projectLink }: Project = $props();
 </script>
 
 <article
 	aria-label={`${title}-card`}
 	class="glass-panel group flex cursor-pointer break-inside-avoid flex-col overflow-hidden rounded-xl shadow-secondary-container/10 transition-all duration-300 hover:shadow-[0_0_20px_5px]"
 >
-	<ImageContainer {images} {tag} />
+	<ImageContainer {image} {tag} />
 	<div class="gap-sm flex flex-grow flex-col gap-2 p-6">
 		<h3 class="text-headline-md text-on-surface">{title}</h3>
 		<p class="text-on-surface-variant ml:line-clamp-4 ml:text-wrap">{description}</p>
