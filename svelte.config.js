@@ -13,7 +13,7 @@ const config = {
 		inlineStyleThreshold: 10240, // 10 KB
 		adapter: adapter({
 			images: {
-				sizes: [640, 828, 1200, 1920, 3072],
+				sizes: [640, 828, 1200, 1920],
 				minimumCacheTTL: 2592000, // 30 days (1 month)								 
 				formats: ['image/avif', 'image/webp'],
 				domains: ["ucrjmqloirqtrqxindxn.supabase.co"]
