@@ -2,7 +2,10 @@ import type { Project } from '$lib/features/home/interfaces/card-props';
 import { supabase } from '$lib/supabase/supabase-client';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({setHeaders}) => {
+	setHeaders({
+		'cache-control': 'public, max-age=3600, s-maxage=3600' // 1 hours
+	})
 	const data = async () => {
 		const { data, error } = await supabase
 			.from('projects')
