@@ -16,6 +16,7 @@
 				class="h-full w-full object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
 				src={image}
 				srcset={optimize(image)}
+				sizes="100vw"
 				alt="Bima Hamdhika Irfy"
 				loading="eager"
 				decoding="async"

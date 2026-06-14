@@ -7,10 +7,11 @@
 
 <div class="relative h-48 w-full overflow-hidden bg-surface-high">
 	<img
+		class="absolute inset-0 h-full w-full object-cover opacity-85 transition-all duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
 		src={image.asset}
 		srcset={optimize(image.asset)}
+		sizes="100vw"
 		alt={image.alt}
-		class="absolute inset-0 h-full w-full object-cover opacity-85 transition-all duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
 		loading="eager"
 		decoding="async"
 	/>

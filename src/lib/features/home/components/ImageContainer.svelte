@@ -9,10 +9,11 @@
 	class="relative order-1 col-span-3 h-[200px] w-full overflow-hidden ml:order-2 ml:h-full ml:w-[55%]"
 >
 	<img
+		class="block h-full w-full object-cover opacity-80 transition-all duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
 		src={image.asset}
 		srcset={optimize(image.asset)}
+		sizes="100vw"
 		alt={image.alt}
-		class="block h-full w-full object-cover opacity-80 transition-all duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
 		loading="lazy"
 		decoding="async"
 	/>
