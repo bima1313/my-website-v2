@@ -5,6 +5,6 @@
 </script>
 
 <div class="flex gap-2">
-	<Icon name="chevronRight" size={28} className="fill-primary shrink-0" />
+	<Icon name="chevronRight" size={28} className="fill-primary" />
 	<span class="text-on-surface-variant">{data}</span>
 </div>

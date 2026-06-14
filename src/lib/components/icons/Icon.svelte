@@ -11,15 +11,15 @@
 
 <script lang="ts">
 	import type { ClassValue } from 'svelte/elements';
-	import { iconMap, type iconType } from './icon-map';
+	import { iconMap, type IconType } from './icon-map';
 
 	let {
 		name,
 		size = 24,
 		className
-	}: { name: iconType; size?: number; className?: ClassValue } = $props();
+	}: { name: IconType; size?: number; className?: ClassValue } = $props();
 
 	let SelectedIcon = $derived(iconMap[name] || iconMap.web);
 </script>
 
-<SelectedIcon {size} {className} />
+<SelectedIcon {size} className={['shrink-0', className]} />
