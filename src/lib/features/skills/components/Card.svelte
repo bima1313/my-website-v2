@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from '$lib/components/icons/Icon.svelte';
 	import type { props } from '$lib/features/skills/interfaces/skill-props';
 	import ListItem from './ListItem.svelte';
 
@@ -11,7 +12,7 @@
 >
 	<div class="mb-12 flex items-center gap-3">
 		<div class={['flex h-10 w-10 items-center justify-center rounded', icon.color]}>
-			<span class="material-icons">{icon.name}</span>
+			<Icon name={icon.name} />
 		</div>
 		<h2 class="text-headline-md text-on-surface">{title}</h2>
 	</div>

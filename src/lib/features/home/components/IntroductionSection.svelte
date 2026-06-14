@@ -3,6 +3,7 @@
 	import Chip from '$lib/components/Chip.svelte';
 	import ElevatedButton from '$lib/components/ElevatedButton.svelte';
 	import OutlinedButton from '$lib/components/OutlinedButton.svelte';
+	import Icon from '$lib/components/icons/Icon.svelte';
 </script>
 
 <section
@@ -16,7 +17,7 @@
 			<li>
 				<Chip>
 					<div class="flex items-center gap-1">
-						<span class={['material-icons', item.values.iconColor]}>{item.values.iconName}</span>
+						<Icon name={item.values.iconName} className={item.values.iconColor} />
 						<span>{item.values.description}</span>
 					</div>
 				</Chip>
@@ -36,9 +37,11 @@
 			title="Contact Me"
 			path="/about#contact"
 		>
-			<span class="material-icons md-20 duration-200 ease-in-out group-hover:translate-x-2"
-				>arrow_forward</span
-			>
+			<Icon
+				name="arrowForward"
+				size={20}
+				className="duration-200 ease-in-out group-hover:translate-x-2 fill-on-primary"
+			/>
 		</ElevatedButton>
 		<OutlinedButton
 			className="flex px-[80px] py-3 text-lg font-semibold"

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { applyAction, enhance } from '$app/forms';
 	import type { ActionData } from '$lib';
+	import Icon from '$lib/components/icons/Icon.svelte';
 	import TextArea from '$lib/features/about/components/TextArea.svelte';
 	import TextInput from '$lib/features/about/components/TextInput.svelte';
 
@@ -47,10 +48,10 @@
 				<button
 					disabled={isLoading}
 					type="submit"
-					class="mt-3 flex items-center gap-3 self-center rounded-[0.25rem] bg-hyper-blue px-12 py-3 text-sm font-medium text-night-snow transition-colors duration-200 ease-in-out hover:bg-primary-fixed hover:text-on-primary md:self-start md:text-[17px]"
+					class="group mt-3 flex items-center gap-3 self-center rounded-[0.25rem] bg-hyper-blue px-12 py-3 text-sm font-medium text-night-snow transition-colors duration-200 ease-in-out hover:bg-primary-fixed hover:text-on-primary md:self-start md:text-[17px]"
 					>{isLoading ? 'Sending...' : 'Send Message'}
-					<span class="material-icons md-20">send</span></button
-				>
+					<Icon name="send" className={['w-5 h-5 fill-night-snow group-hover:fill-on-primary']} />
+				</button>
 			</form>
 			{#if form?.success && isLoading == false}
 				<span class="text-lg text-on-surface-variant">Your message is success</span>

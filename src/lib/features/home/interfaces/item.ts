@@ -1,5 +1,7 @@
+import type { IconType } from "$lib/components/icons/icon-map";
+
 interface Values {
-	iconName: string;
+	iconName: IconType;
 	iconColor: string;
 	description: string;
 }

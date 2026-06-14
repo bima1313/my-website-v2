@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+:root {
+	background-color: var(--color-surface);
+}
+
 @theme {
 	/* system colors */
 	--color-primary: #a6c8ff;
@@ -13,7 +17,7 @@
 	--color-mint-green: #a7f3d0;
 	--color-midnight-sky: #424751;
 	--color-hyper-blue: #02539a;
-	--color-night-snow: #a5c8ff;	
+	--color-night-snow: #a5c8ff;
 
 	/*surface colors*/
 	--color-surface: #111318;
@@ -43,24 +47,26 @@
 	overflow: visible;
 	@apply text-wrap;
 }
-:root {
-	background-color: var(--color-surface);
-}
-
 @utility header-container {
 	@apply mx-auto flex h-20 w-full items-center justify-between px-16;
 }
 @utility header-container-mobile {
 	@apply mx-auto flex h-20 w-full items-center gap-8 px-6;
 }
-.material-icons.md-18 {
-	font-size: 18px;
+.hamburger-menu-btn{
+	@apply gap-1.5 p-2 flex flex-col
 }
-.material-icons.md-20 {
-	font-size: 20px;
+.line {
+	@apply w-7 h-0.5 block rounded-sm transform duration-300 ease-in-out bg-on-surface
 }
-.material-icons.md-28 {
-	font-size: 28px;
+.hamburger-menu-btn[aria-expanded='true'] .line:nth-child(1){
+	@apply rotate-45 translate-y-2
+}
+.hamburger-menu-btn[aria-expanded='true'] .line:nth-child(2){
+	@apply scale-0
+}
+.hamburger-menu-btn[aria-expanded='true'] .line:nth-child(3){
+	@apply -rotate-45 -translate-y-2
 }
 .glass-panel {
 	background-color: rgba(22, 27, 34, 0.6);

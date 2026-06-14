@@ -1,9 +1,11 @@
+import type { IconType } from "$lib/components/icons/icon-map";
+
 interface Tech {
 	name: string;
 	skillLevel?: string;
 }
 interface IconData {
-	name: string;
+	name: IconType;
 	color: string;
 }
 export interface props {

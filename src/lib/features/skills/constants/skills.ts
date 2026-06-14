@@ -5,7 +5,7 @@ export const skills: readonly props[] = [
 		title: 'Frontend Web',
 		icon: {
 			name: 'web',
-			color: 'bg-primary/10 text-primary'
+			color: 'bg-primary/10 fill-primary'
 		},
 		technologies: [
 			{
@@ -35,7 +35,7 @@ export const skills: readonly props[] = [
 		title: 'Mobile / Android (Flutter)',
 		icon: {
 			name: 'smartphone',
-			color: 'bg-secondary/10 text-secondary'
+			color: 'bg-secondary/10 fill-secondary'
 		},
 		technologies: [
 			{
@@ -60,7 +60,7 @@ export const skills: readonly props[] = [
 		title: 'Backend & Architecture',
 		icon: {
 			name: 'dns',
-			color: 'bg-tertiary/10 text-tertiary'
+			color: 'bg-tertiary/10 fill-tertiary'
 		},
 		technologies: [
 			{
@@ -104,7 +104,7 @@ export const skills: readonly props[] = [
 		title: 'Development Tools',
 		icon: {
 			name: 'terminal',
-			color: 'bg-mint-green/10 text-mint-green'
+			color: 'bg-mint-green/10 fill-mint-green'
 		},
 		technologies: [
 			{

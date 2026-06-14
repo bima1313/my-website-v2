@@ -6,6 +6,7 @@
 	import { activation } from '$lib/states/mobile-nav-activation.svelte';
 	import Chip from './Chip.svelte';
 	import type { Pathname } from '$app/types';
+	import Icon from './icons/Icon.svelte';
 
 	let lastProjectsUrl = $state('/projects');
 	$effect(() => {
@@ -28,17 +29,23 @@
 				>
 					<Chip
 						className={[
-							'w-full py-3 cursor-pointer text-2xl font-extrabold transition-colors duration-200 ease-in-out hover:text-primary rounded-lg flex items-center gap-4 mb-2',
+							'w-full py-3 cursor-pointer text-2xl font-extrabold transition-colors duration-200 ease-in-out hover:text-primary rounded-lg flex items-center gap-4 mb-2 group',
 							page.url.pathname === item.navPath ? 'w-full bg-on-primary text-primary' : ''
 						]}
 					>
-						<span class="material-icons md:20">{item.iconName}</span>
+						<Icon
+							name={item.iconName}
+							className={[
+								'group-hover:fill-primary',
+								page.url.pathname === item.navPath ? 'fill-primary' : 'fill-on-surface-variant'
+							]}
+						/>
 						<span>{item.navName}</span>
 					</Chip>
 				</a>
 			{/each}
 		</ul>
 	</div>
-	<!--Blurring container in right side-->
+	<!--Blurring container in the right side-->
 	<div class="w-[37.5%] bg-surface-low/10"></div>
 </div>

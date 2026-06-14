@@ -2,6 +2,7 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import type { PageData } from '$lib';
+	import Icon from '$lib/components/icons/Icon.svelte';
 	import Card from './Card.svelte';
 	import ShimmerCard from './ShimmerCard.svelte';
 
@@ -20,7 +21,11 @@
 			href={resolve('/projects')}
 			class="group flex items-center gap-1 font-medium text-primary transition-colors hover:text-primary-fixed"
 			>All Projects
-			<span class="material-icons md-18 transition-transform group-hover:translate-x-1">east</span>
+			<Icon
+				name="east"
+				size={18}
+				className="transition-transform fill-primary group-hover:translate-x-1 group-hover:fill-primary-fixed"
+			/>
 		</a>
 	</div>
 

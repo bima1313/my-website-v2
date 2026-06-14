@@ -1,8 +1,10 @@
 <script lang="ts">
+	import Icon from '$lib/components/icons/Icon.svelte';
+
 	let { data }: { data: string } = $props();
 </script>
 
 <div class="flex gap-2">
-	<span class="material-icons md-28 text-primary">chevron_right</span>
+	<Icon name="chevronRight" size={28} className="fill-primary shrink-0" />
 	<span class="text-on-surface-variant">{data}</span>
 </div>
