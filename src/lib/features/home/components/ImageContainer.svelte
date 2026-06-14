@@ -12,7 +12,7 @@
 		class="block h-full w-full object-cover opacity-80 transition-all duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
 		src={image.asset}
 		srcset={optimize(image.asset)}
-		sizes="100vw"
+		sizes="(min-width: 1024px) 33vw, 100vw"
 		alt={image.alt}
 		loading="lazy"
 		decoding="async"
