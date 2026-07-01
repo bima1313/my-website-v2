@@ -32,12 +32,20 @@ export const skills: readonly props[] = [
 		]
 	},
 	{
-		title: 'Mobile / Android (Flutter)',
+		title: 'Mobile / Android',
 		icon: {
 			name: 'smartphone',
 			color: 'bg-secondary/10 fill-secondary'
 		},
 		technologies: [
+			{
+				name: 'Kotlin',
+				skillLevel: 'basic'
+			},
+			{
+				name: 'Jetpack Compose',
+				skillLevel: 'basic'
+			},
 			{
 				name: 'Dart'
 			},
