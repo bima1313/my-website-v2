@@ -16,16 +16,19 @@
 <nav class="hidden items-center gap-12 ml:flex" aria-label="main menu">
 	<ul class="flex items-center justify-center gap-12 text-on-surface-variant">
 		{#each navItems as item, index (index)}
-			<a
+			<li
 				class={[
 					'cursor-pointer transition-transform duration-200 ease-in-out hover:text-primary',
 					page.url.pathname === item.navPath ? 'border-b-2 border-primary text-primary' : ''
 				]}
 				aria-current={page.url.pathname === item.navPath}
-				href={item.navPath === '/projects'
-					? resolve(lastProjectsUrl as Pathname)
-					: resolve(item.navPath)}>{item.navName}</a
 			>
+				<a
+					href={item.navPath === '/projects'
+						? resolve(lastProjectsUrl as Pathname)
+						: resolve(item.navPath)}>{item.navName}</a
+				>
+			</li>
 		{/each}
 	</ul>
 </nav>
