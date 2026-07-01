@@ -1,9 +1,7 @@
 <script lang="ts">
 	import AboutContent from '$lib/features/about/components/AboutContent.svelte';
-	import { optimize } from '$lib/utils/image-optimize';
 
-	const image =
-		'https://ucrjmqloirqtrqxindxn.supabase.co/storage/v1/object/public/images/my-image.jpg';
+	import image from '$lib/assets/my-image.jpg?enhanced'
 </script>
 
 <section
@@ -12,14 +10,11 @@
 	<div class="flex w-full justify-center md:w-1/2 md:justify-end">
 		<div class="group relative aspect-[3/4] w-full max-w-md overflow-hidden rounded-xl">
 			<div class="absolute -z-10 h-full w-full border border-on-surface"></div>
-			<img
+			<enhanced:img
 				class="h-full w-full object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
 				src={image}
-				srcset={optimize(image)}
-				sizes="(min-width: 1024px) 33vw, 100vw"
+				sizes="(min-width: 768px) 448px, 100vw"
 				alt="Bima Hamdhika Irfy"
-				loading="eager"
-				decoding="async"
 			/>
 		</div>
 	</div>
