@@ -5,9 +5,6 @@ import { supabase } from '$lib/supabase/supabase-client';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ url, setHeaders }) => {
-	setHeaders({
-		'cache-control': 'public, max-age=3600, s-maxage=3600' // 1 hours
-	});
 	const parameter = url.searchParams.get('category');
 
 	const data = async () => {
